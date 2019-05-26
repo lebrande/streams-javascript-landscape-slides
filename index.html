@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Strumienie i Potoki w Krajobrazie JavaScript - Jakub Pusiak lebrande</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -25,18 +25,211 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section id="introduction">
+					<section id="cover">
+						<h1>Strumienie i Potoki</h1>
+						<p>w Krajobrazie JavaScript</p>
+						<div class="fragment">
+							(śmieszne zdjęcie z krajobrazem i JS)
+						</div>
+					</section>
+					
+					<section id="lebrande-tweet">
+						<blockquote class="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">First day of rewriting our React app from JS to real <a href="https://twitter.com/typescript?ref_src=twsrc%5Etfw">@typescript</a>. <a href="https://t.co/9QjqFFig2F">pic.twitter.com/9QjqFFig2F</a></p>&mdash; Jakub Pusiak 👨‍💻⚛️📱 (@le_brande) <a href="https://twitter.com/le_brande/status/1129039738806120450?ref_src=twsrc%5Etfw">16 maja 2019</a></blockquote>
+					</section>
+	
+					<section id="lebrande-twiter-nick">
+						<p>@le_brande</p>
+					</section>
+					
+					<section id="intive">
+						<img
+							src="./images/intive-logo.jpg" alt="intive"
+							style="max-height: 500px; display: block; margin: 0 auto 1em;"
+						/>
+					</section>
+				</section>
+
+				<section id="streams">
+					<section>
+						<p>Reactive programming</p>
+						<p>Dlaczego strumienie są optymalne?</p>
+					</section>
+
+					<section id="stream-libraries">
+						<p>Biblioteki do streamów:</p>
+						<ul style="list-style: none;">
+							<li class="fragment" data-fragment-index="1">
+								<span class="fragment" data-fragment-index="4">👉</span>
+								<a href="https://github.com/Reactive-Extensions/RxJS">RxJS</a>
+							</li>
+							<li class="fragment" data-fragment-index="2">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://github.com/cujojs/most">most</a>
+							</li>
+							<li class="fragment" data-fragment-index="3">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://github.com/staltz/xstream">xstream</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section id="observables">
+					<section id="zrodla-i-zrodelka">
+						<h2 class="fragment" data-fragment-index="4">observables</h2>
+						<div class="fragment" data-fragment-index="3">
+							(zdjęcie jakiegoś źródełka)
+						</div>
+						<p>
+							<span class="fragment" data-fragment-index="1">Źródła</span>
+							<span class="fragment" data-fragment-index="2">i źródełka</span>
+						</p>
+					</section>
+
+					<section id="observables-translation">
+						<img
+							style="max-height: 400px;"
+							src="./images/observables-trasnlation.png"
+							alt="observables-trasnlation.png"
+						>
+					</section>
+
+					<section>
+						<p style="font-size: 3em; ">🤔</p>
+						<p class="fragment">Co może być źródłem danych w strumieniach?</p>
+					</section>
+
+					<section>
+						<ul style="list-style: none; font-size: 2em;">
+							<li><span class="fragment">✅</span> Array []</li>
+							<li><span class="fragment">❌</span> Object {}</li>
+						</ul>						
+					</section>
+
+					<section>
+						<p class="fragment">✅ Events</p>
+						<img
+							style="max-height: 400px;"
+							src="./images/events.jpg"
+							alt="events"
+						>
+					</section>
+
+					<section>
+						<p><span class="fragment">✅</span> Number</p>
+					</section>
+
+					<section>
+						<p><span class="fragment" data-fragment-index="2">✅</span> String</p>
+						<div>⬇️⬇️⬇️⬇️⬇️</div>
+						<div class="fragment" data-fragment-index="1">
+								<pre><code>
+		['s', 't', 'r', 'i', 'n', 'g']
+								</code></pre>
+						</div>
+					</section>
+
+					<section>
+						<ul style="list-style: none;">
+							<li class="fragment">✅ Promises</li>
+							<li class="fragment">✅ AJAX</li>
+							<li class="fragment">✅ timeout, interval</li>
+							<li class="fragment">✅ Redux actions</li>
+							<li class="fragment">✅ Redux state</li>
+							<li class="fragment">✅ Components (props)</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Budowle rzeczne</p>
+						(zdjęcie z tamą na rzece)
+						<h2>Operatory</h2>
+					</section>
+
+					<section>
+						(przykład kodu, dodac kilka slajdów)
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Streamy w node.js</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Biblioteki i frameworki, które próbowałem:</p>
+						<ul style="list-style: none;">
+							<li class="fragment">Redux + RxJS = redux-observable</li>
+							<li class="fragment">React + RxJS = react-streams</li>
+							<li class="fragment">React + Recompose + RxJS -> createComponentsStream + inne</li>
+							<li class="fragment">Redux + Cycles + Most = redux-cycles</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>(schemat aplikacji wraz z umiejscowieniem poszczególnych elementów)</p>
+					</section>
+				</section>
+
+				<section id="testing-streams">
+					<section>
+						<p>Testowanie streamów</p>
+						<img
+							style="max-height: 400px;"
+							src="./images/js-test-error.jpeg"
+							alt="testing-streams"
+						>
+					</section>
+
+					<section>
+						<p>Dlaczego side efekty psują nam strumienie?</p>
+					</section>
+
+					<section>
+						<p>Dependency injection</p>
+						<p>RxJS</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Polecane źródła wiedzy</p>
+						<ul>
+							<li>https://www.learnrxjs.io/</li>
+							<li>egghead.io</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="the-end">
+						<p>
+							<h2>Koniec!</h2>
+							<p class="fragment">@le_brande</p>
+							<p class="fragment"> 🙅‍♂️ 🙆‍♂ ️🤦‍♂️ </p>
+						</p>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
 		<script src="js/reveal.js"></script>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				hash: true,
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
