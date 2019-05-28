@@ -13,6 +13,14 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
 
+		<style>
+			.reveal section img.clean {
+				border: none;
+				background: none;
+				box-shadow: none;
+			}
+		</style>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -28,24 +36,35 @@
 
 				<section id="introduction">
 					<section id="cover">
-						<h1>Strumienie i Potoki</h1>
+						<h1 style="font-size: 0.8em;">Strumienie i Potoki</h1>
 						<p>w Krajobrazie JavaScript</p>
-						<div class="fragment">
-							(śmieszne zdjęcie z krajobrazem i JS)
-						</div>
+						<img
+							src="./images/javascript-landscape.jpg"
+							alt="javascript-landscape"
+							style="max-height: 400px; display: block; margin: 0 auto 1em;"
+						/>
 					</section>
 					
 					<section id="lebrande-tweet">
-						<blockquote class="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">First day of rewriting our React app from JS to real <a href="https://twitter.com/typescript?ref_src=twsrc%5Etfw">@typescript</a>. <a href="https://t.co/9QjqFFig2F">pic.twitter.com/9QjqFFig2F</a></p>&mdash; Jakub Pusiak 👨‍💻⚛️📱 (@le_brande) <a href="https://twitter.com/le_brande/status/1129039738806120450?ref_src=twsrc%5Etfw">16 maja 2019</a></blockquote>
+						<div style="max-width: 500px; margin: 0 auto;">
+							<blockquote class="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">First day of rewriting our React app from JS to real <a href="https://twitter.com/typescript?ref_src=twsrc%5Etfw">@typescript</a>. <a href="https://t.co/9QjqFFig2F">pic.twitter.com/9QjqFFig2F</a></p>&mdash; Jakub Pusiak 👨‍💻⚛️📱 (@le_brande) <a href="https://twitter.com/le_brande/status/1129039738806120450?ref_src=twsrc%5Etfw">16 maja 2019</a></blockquote>
+						</div>
 					</section>
 	
 					<section id="lebrande-twiter-nick">
+						<img
+							class="clean"
+							src="./images/twitter.svg"
+							alt="twitter - @le_brande"
+						>
 						<p>@le_brande</p>
 					</section>
 					
 					<section id="intive">
 						<img
-							src="./images/intive-logo.jpg" alt="intive"
+							class="clean"
+							src="./images/intive-logo.jpg"
+							alt="intive"
 							style="max-height: 500px; display: block; margin: 0 auto 1em;"
 						/>
 					</section>
@@ -58,7 +77,7 @@
 					</section>
 
 					<section id="stream-libraries">
-						<p>Biblioteki do streamów:</p>
+						<p>Narzędzia do streamów:</p>
 						<ul style="list-style: none;">
 							<li class="fragment" data-fragment-index="1">
 								<span class="fragment" data-fragment-index="4">👉</span>
@@ -74,14 +93,25 @@
 							</li>
 						</ul>
 					</section>
+
+					<section>
+						<img
+							class="clean"
+							src="./images/reactivex.svg"
+							alt="reactivex"
+						/>
+						<p class="fragment">Rx <span class="fragment">- Reactive Extensions</span></p>
+					</section>
 				</section>
 
 				<section id="observables">
 					<section id="zrodla-i-zrodelka">
 						<h2 class="fragment" data-fragment-index="4">observables</h2>
-						<div class="fragment" data-fragment-index="3">
-							(zdjęcie jakiegoś źródełka)
-						</div>
+						<img
+							src="./images/sources.jpg"
+							alt="sources"
+							style="max-height: 400px; display: block; margin: 0 auto 1em;"
+						/>
 						<p>
 							<span class="fragment" data-fragment-index="1">Źródła</span>
 							<span class="fragment" data-fragment-index="2">i źródełka</span>
@@ -91,8 +121,8 @@
 					<section id="observables-translation">
 						<img
 							style="max-height: 400px;"
-							src="./images/observables-trasnlation.png"
-							alt="observables-trasnlation.png"
+							src="./images/observable-translation.png"
+							alt="observable-translation"
 						>
 					</section>
 
@@ -119,12 +149,16 @@
 
 					<section>
 						<p><span class="fragment">✅</span> Number</p>
+						<p class="fragment">7 - [👏, 👏, 👏, 👏, 👏, 👏, 👏]</p>
+						<p class="fragment">5 - [⭐️, ⭐️, ⭐️, ⭐️, ⭐]</p>
+						<p class="fragment">3 - [⏭, ⏭, ⏭]</p>
+						<p class="fragment">null - []</p>
 					</section>
 
 					<section>
-						<p><span class="fragment" data-fragment-index="2">✅</span> String</p>
-						<div>⬇️⬇️⬇️⬇️⬇️</div>
-						<div class="fragment" data-fragment-index="1">
+						<p><span class="fragment">✅</span> String</p>
+						<div class="fragment">⬇️</div>
+						<div class="fragment">
 								<pre><code>
 		['s', 't', 'r', 'i', 'n', 'g']
 								</code></pre>
@@ -133,8 +167,8 @@
 
 					<section>
 						<ul style="list-style: none;">
-							<li class="fragment">✅ Promises</li>
-							<li class="fragment">✅ AJAX</li>
+							<li>✅ Promises</li>
+							<li class="fragment">✅ AJAX requests</li>
 							<li class="fragment">✅ timeout, interval</li>
 							<li class="fragment">✅ Redux actions</li>
 							<li class="fragment">✅ Redux state</li>
@@ -145,35 +179,145 @@
 
 				<section>
 					<section>
-						<p>Budowle rzeczne</p>
-						(zdjęcie z tamą na rzece)
-						<h2>Operatory</h2>
+						<p class="fragment">🏗 Budowle rzeczne</p>
+						<img
+							style="max-height: 360px;"
+							src="./images/budowle-rzeczne.jpg"
+							alt="operatory"
+						>
+						<h2 class="fragment">Operatory</h2>
 					</section>
 
 					<section>
-						(przykład kodu, dodac kilka slajdów)
+						<h2>Live coding!</h2>
+					</section>
+
+					<section
+						data-background-interactive
+						data-background-iframe="https://codesandbox.io/embed/trusting-lumiere-dvs8s?fontsize=14" title="RxJS - live coding" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+					>
+					</section>
+
+					<section>
+						<iframe src="https://codesandbox.io/embed/rxjs-typewriter-example-0c64p?fontsize=14" title="RxJS typewriter - example" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<p>Streamy w node.js</p>
+						<pre><code>
+const stream = require('stream');
+
+const writeStream = fs.createWriteStream('data.txt');
+
+writeStream.on('error', error => {
+  console.log({ error });
+});
+
+writeStream.write('dupa');
+
+writeStream.end();
+						</code></pre>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<p>Biblioteki i frameworki, które próbowałem:</p>
-						<ul style="list-style: none;">
-							<li class="fragment">Redux + RxJS = redux-observable</li>
-							<li class="fragment">React + RxJS = react-streams</li>
-							<li class="fragment">React + Recompose + RxJS -> createComponentsStream + inne</li>
-							<li class="fragment">Redux + Cycles + Most = redux-cycles</li>
-						</ul>
+						<p class="fragment">Czego próbowałem? </p>
+						<img
+							style="max-height: 500px"
+							src="./images/kajak.jpg"
+							alt="czego próbowałem?"
+						>
 					</section>
 
 					<section>
-						<p>(schemat aplikacji wraz z umiejscowieniem poszczególnych elementów)</p>
+						<img
+							class="clean"
+							style="max-height: 500px; background-color: white; padding: 1em;"
+							src="./images/javascript-app-schema.png"
+							alt="javascript-app-schema"
+						>
+					</section>
+
+					<section>
+						<p>Redux + RxJS = redux-observable</p>
+						<div
+							class="fragment"
+							style="display: flex; justify-content: space-around; align-items: center; font-size: 4em;"
+						>
+							<img
+								style="max-height: 200px;"
+								class="clean"
+								src="./images/redux.svg"
+								alt="redux"
+							>
+							<div>+</div>
+							<img
+								style="max-height: 200px;"
+								class="clean"
+								src="./images/reactivex.svg"
+								alt="reactivex"
+							>
+							<div>=</div>
+							<img
+								style="max-height: 200px;"
+								class="clean"
+								src="./images/redux-observable.svg"
+								alt="redux-observable"
+							>
+						</div>
+						<p class="fragment">Streams of actions</p>
+					</section>
+
+					<section>
+						<p>Redux + Cycles + Most = redux-cycles</p>
+						<p class="fragment">Streams of actions</p>
+					</section>
+
+					<section>
+						<p>React + RxJS = react-streams</p>
+						<div
+							class="fragment"
+							style="display: flex; justify-content: space-around; align-items: center; font-size: 4em;"
+						>
+							<img
+								style="max-height: 200px;"
+								class="clean"
+								src="./images/react.svg"
+								alt="react"
+							>
+							<div>+</div>
+							<img
+								style="max-height: 200px;"
+								class="clean"
+								src="./images/reactivex.svg"
+								alt="reactivex"
+							>
+							<div>=</div>
+							<img
+								style="height: 220px;"
+								class="clean"
+								src="./images/react-streams.svg"
+								alt="react-streams"
+							>
+						</div>
+						<p class="fragment">Streams of components (props), events</p>
+					</section>
+
+					<section>
+						<p>React + Recompose + RxJS</p>
+						<p class="fragment">Streams of props, events</p>
+					</section>
+
+					<section>
+						<img
+							class="clean"
+							style="max-height: 500px; background-color: white; padding: 1em;"
+							src="./images/javascript-app-schema.png"
+							alt="javascript-app-schema"
+						>
 					</section>
 				</section>
 
@@ -192,17 +336,48 @@
 					</section>
 
 					<section>
-						<p>Dependency injection</p>
-						<p>RxJS</p>
+						<p>[⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ...]</p>
+						<p>+</p>
+						<p>🎨 (side effect, np. HTTP request)</p>
+						<p>=</p>
+						<p>[⚫️, 🔴, 🔵]</p>
 					</section>
+
+					<section>
+						<p class="fragment">Skąd się biorą te kolory?</p>
+						<pre><code>
+const balls = [⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ⚪️];
+
+const ball$ = from(balls).pipe(
+	take(3),
+	map(🎨),
+	map(ball => console.log(ball)),
+);
+						</code></pre>
+					</section>
+
+					<section>
+							<p>Dependency injection 💉</p>
+							<pre class="fragment"><code>
+const balls = [⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ⚪️, ⚪️];
+
+const ballsStreamCreator = (🎨) => from(balls).pipe(
+	take(3),
+	map(🎨),
+	map(ball => console.log(ball)),
+);
+							</code></pre>
+						</section>
 				</section>
 
 				<section>
 					<section>
 						<p>Polecane źródła wiedzy</p>
 						<ul>
+							<li>https://rxjs-dev.firebaseapp.com - docs</li>
 							<li>https://www.learnrxjs.io/</li>
 							<li>egghead.io</li>
+							<li>Nexflix developers on Twitter</li>
 						</ul>
 					</section>
 				</section>
